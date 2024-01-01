@@ -1,6 +1,5 @@
-// Test2.js
 import React from "react";
-import { Form, Input, Button, Select, Row, Col, Radio } from "antd";
+import { Form, Input, Button, Select, Row, Col, Radio, DatePicker } from "antd";
 import { useDispatch } from "react-redux";
 import { addFormData } from "../redux/formDataSlice";
 import TableComponent from "../components/TableComponent";
@@ -65,8 +64,34 @@ const Test2 = () => {
           </Col>{" "}
         </Row>{" "}
         <Row gutter={16}>
+          <Col span={10}>
+            <Form.Item
+              label="Date of Birth"
+              name="dateOfBirth"
+              rules={[{ required: true }]}
+            >
+              <DatePicker style={{ width: "100%" }} />
+            </Form.Item>
+          </Col>{" "}
+          <Col span={10}>
+            <Form.Item
+              name="nationality"
+              label="สัญชาติ"
+              rules={[{ required: true }]}
+            >
+              <Select placeholder="--กรุณาเลือก--" allowClear>
+                <Option value="Thai nationality">สัญชาติไทย</Option>
+              </Select>
+            </Form.Item>
+          </Col>{" "}
+        </Row>{" "}
+        <Row gutter={16}>
           <Col span={20}>
-            <Form.Item label="Gender" name="gender">
+            <Form.Item
+              label="Gender"
+              name="gender"
+              rules={[{ required: true }]}
+            >
               <Radio.Group>
                 <Radio value="male">male</Radio>
                 <Radio value="female">female</Radio>
