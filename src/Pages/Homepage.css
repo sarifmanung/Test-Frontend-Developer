@@ -1,0 +1,13 @@
+.custom-col {
+    background: #ffffff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    /* Smooth transition effect */
+}
+
+.custom-col:hover {
+    background: #e6f7ff;
+    /* Change this to your desired hover background color */
+}
