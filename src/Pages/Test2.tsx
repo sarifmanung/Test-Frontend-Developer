@@ -14,6 +14,14 @@ const Test2 = () => {
     form.resetFields();
   };
 
+  const phone_prefixSelector = (
+    <Form.Item name="phone_prefix" noStyle>
+      <Select style={{ width: 70 }}>
+        <Option value="66">+66</Option>
+      </Select>
+    </Form.Item>
+  );
+
   const onFinish = (values) => {
     console.log("Received values:", values);
     // dispatch(addFormData(values));
@@ -100,7 +108,22 @@ const Test2 = () => {
             </Form.Item>
           </Col>{" "}
         </Row>{" "}
-        {/*  */}
+        <Row gutter={16}>
+          <Col span={20}>
+            <Form.Item label="ID Card Number" name="idCardNumber">
+              <Input />
+            </Form.Item>
+          </Col>
+        </Row>
+        <Form.Item
+          name="phone"
+          label="Phone Number"
+          rules={[
+            { required: true, message: "Please input your phone number!" },
+          ]}
+        >
+          <Input addonBefore={phone_prefixSelector} style={{ width: "100%" }} />
+        </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
             Submit{" "}
