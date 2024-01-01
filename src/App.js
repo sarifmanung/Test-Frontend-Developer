@@ -5,7 +5,7 @@ import Homepage from "./Pages/Homepage";
 import Testlang from "./Pages/Testing/Testlang";
 import FormTest from "./Pages/Testing/FormTest.tsx";
 import Test1 from "./Pages/Test1";
-import Test2 from "./Pages/Test2";
+import Test2 from "./Pages/Test2.tsx";
 
 function App() {
   return (
