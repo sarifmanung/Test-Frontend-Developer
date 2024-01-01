@@ -12,7 +12,7 @@ import {
   InputNumber,
 } from "antd";
 import { useDispatch } from "react-redux";
-import { addFormData } from "../redux/formDataSlice";
+import { addFormData } from "../redux/formDataSlice.tsx";
 import TableComponent from "../components/TableComponent.tsx";
 import "./Test2.scss";
 
@@ -36,7 +36,7 @@ const Test2 = () => {
 
   const onFinish = (values) => {
     console.log("Received values:", values);
-    // dispatch(addFormData(values));
+    dispatch(addFormData(values));
   };
 
   return (
