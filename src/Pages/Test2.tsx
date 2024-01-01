@@ -1,5 +1,16 @@
 import React from "react";
-import { Form, Input, Button, Select, Row, Col, Radio, DatePicker } from "antd";
+import {
+  Form,
+  Input,
+  Button,
+  Space,
+  Select,
+  Row,
+  Col,
+  Radio,
+  DatePicker,
+  InputNumber,
+} from "antd";
 import { useDispatch } from "react-redux";
 import { addFormData } from "../redux/formDataSlice";
 import TableComponent from "../components/TableComponent";
@@ -119,9 +130,6 @@ const Test2 = () => {
                 </Form.Item>
               </Col>{" "}
             </Row>{" "}
-            <Form.Item label="ID Card Number" name="idCardNumber">
-              <Input />
-            </Form.Item>
             <Form.Item
               name="phone"
               label="Phone Number"
@@ -134,11 +142,40 @@ const Test2 = () => {
                 style={{ width: "100%" }}
               />
             </Form.Item>
-            <Form.Item>
-              <Button type="primary" htmlType="submit">
-                Submit{" "}
-              </Button>{" "}
-            </Form.Item>{" "}
+            <Form.Item label="ID Card Number" name="idCardNumber">
+              <Input />
+            </Form.Item>
+            <Row gutter={16}>
+              <Col span={18}>
+                <Form.Item
+                  label="Salary"
+                  name="salary"
+                  rules={[
+                    { required: true, message: "Please enter the salary" },
+                    {
+                      type: "number",
+                      message: "Please enter a valid number for salary",
+                    },
+                  ]}
+                  labelCol={{ span: 4 }}
+                  wrapperCol={{ span: 20 }}
+                >
+                  <InputNumber style={{ width: "100%" }} />
+                </Form.Item>
+              </Col>
+              <Col span={4}>
+                <Form.Item>
+                  <Space style={{ marginTop: "30px" }}>
+                    <Button htmlType="button" onClick={onReset}>
+                      ล้างข้อมูล
+                    </Button>
+                    <Button type="primary" htmlType="submit">
+                      ส่งข้อมูล
+                    </Button>
+                  </Space>
+                </Form.Item>
+              </Col>
+            </Row>
           </Form>{" "}
         </div>
         <div style={{ maxWidth: "1100px", margin: "auto" }}>
