@@ -57,22 +57,22 @@ const Test2 = () => {
               <Col span={4}>
                 <Form.Item
                   name="prefix"
-                  label="Prefix"
+                  label="คำนำหน้า"
                   rules={[{ required: true }]}
                 >
                   <Select
                     placeholder="Select a option and change input text above"
                     allowClear
                   >
-                    <Option value="Mr.">Mr</Option>
-                    <Option value="Mrs.">Mrs</Option>
-                    <Option value="Miss.">Miss</Option>
+                    <Option value="นาย.">นาย</Option>
+                    <Option value="นางสาว.">นางสาว</Option>
+                    <Option value="นาง.">นาง</Option>
                   </Select>
                 </Form.Item>
               </Col>{" "}
               <Col span={10}>
                 <Form.Item
-                  label="First Name"
+                  label="ชื่อจริง"
                   name="firstName"
                   rules={[
                     { required: true, message: "Please enter your first name" },
@@ -83,7 +83,7 @@ const Test2 = () => {
               </Col>{" "}
               <Col span={10}>
                 <Form.Item
-                  label="Last Name"
+                  label="นามสกุล"
                   name="lastName"
                   rules={[
                     { required: true, message: "Please enter your last name" },
@@ -96,7 +96,7 @@ const Test2 = () => {
             <Row gutter={16}>
               <Col span={10}>
                 <Form.Item
-                  label="Date of Birth"
+                  label="วันเกิด"
                   name="dateOfBirth"
                   rules={[{ required: true }]}
                 >
@@ -110,7 +110,7 @@ const Test2 = () => {
                   rules={[{ required: true }]}
                 >
                   <Select placeholder="--กรุณาเลือก--" allowClear>
-                    <Option value="Thai nationality">สัญชาติไทย</Option>
+                    <Option value="สัญชาติไทย">สัญชาติไทย</Option>
                   </Select>
                 </Form.Item>
               </Col>{" "}
@@ -118,21 +118,21 @@ const Test2 = () => {
             <Row gutter={16}>
               <Col span={20}>
                 <Form.Item
-                  label="Gender"
+                  label="เพศ"
                   name="gender"
                   rules={[{ required: true }]}
                 >
                   <Radio.Group>
-                    <Radio value="male">male</Radio>
-                    <Radio value="female">female</Radio>
-                    <Radio value="other">other</Radio>
+                    <Radio value="ผู้ชาย">ผู้ชาย</Radio>
+                    <Radio value="ผู้หญิง">ผู้หญิง</Radio>
+                    <Radio value="ไม่ระบุ">ไม่ระบุ</Radio>
                   </Radio.Group>
                 </Form.Item>
               </Col>{" "}
             </Row>{" "}
             <Form.Item
               name="phone"
-              label="Phone Number"
+              label="หมายเลขโทรศัพท์มือถือ:"
               rules={[
                 { required: true, message: "Please input your phone number!" },
               ]}
@@ -142,13 +142,13 @@ const Test2 = () => {
                 style={{ width: "100%" }}
               />
             </Form.Item>
-            <Form.Item label="ID Card Number" name="idCardNumber">
+            <Form.Item label="หนังสือเดินทาง" name="idCardNumber">
               <Input />
             </Form.Item>
             <Row gutter={16}>
               <Col span={18}>
                 <Form.Item
-                  label="Salary"
+                  label="เงินเดือนที่คาดหวัง"
                   name="salary"
                   rules={[
                     { required: true, message: "Please enter the salary" },
