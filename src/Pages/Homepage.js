@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "antd";
 import { useTranslation } from "react-i18next";
-import TranslationSection from "../components/Translation";
+import TranslationSection from "../components/Translation.tsx";
 import "./Homepage.css";
 
 function Homepage() {

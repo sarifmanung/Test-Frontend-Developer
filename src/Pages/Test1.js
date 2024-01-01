@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Layout, Button } from "antd";
 import { useTranslation } from "react-i18next";
 import "./TestCssShape.scss";
-import TranslationSection from "../components/Translation";
+import TranslationSection from "../components/Translation.tsx";
 
 const { Content } = Layout;
 
