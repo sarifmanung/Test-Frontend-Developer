@@ -13,7 +13,7 @@ import {
 } from "antd";
 import { useDispatch } from "react-redux";
 import { addFormData } from "../redux/formDataSlice";
-import TableComponent from "../components/TableComponent";
+import TableComponent from "../components/TableComponent.tsx";
 import "./Test2.scss";
 
 const { Option } = Select;
