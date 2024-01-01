@@ -5,7 +5,7 @@ import { deleteFormData } from "../redux/formDataSlice.tsx";
 
 // Define the FormData interface
 interface FormData {
-  key: string;
+  id: number;
   name: string;
   gender: string;
   phonenumber: string;
@@ -19,7 +19,7 @@ const TableComponent: React.FC = () => {
   const dispatch = useDispatch();
 
   const handleDelete = (record: FormData) => {
-    dispatch(deleteFormData(record.key));
+    dispatch(deleteFormData(record.id));
   };
 
   const columns = [

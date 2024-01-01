@@ -1,22 +1,25 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface FormData {
-  key: string;
+  id: number;
   name: string;
   gender: string;
   phonenumber: string;
   nation: string;
 }
 
+let nextId = 1; // Initialize the counter
+
 export const formDataSlice = createSlice({
   name: "formData",
   initialState: [] as FormData[],
   reducers: {
     addFormData: (state, action: PayloadAction<FormData>) => {
-      state.push(action.payload);
+      const newFormData = { ...action.payload, id: nextId++ };
+      state.push(newFormData);
     },
-    deleteFormData: (state, action: PayloadAction<string>) => {
-      return state.filter((item) => item.key !== action.payload);
+    deleteFormData: (state, action: PayloadAction<number>) => {
+      return state.filter((item) => item.id !== action.payload);
     },
   },
 });
